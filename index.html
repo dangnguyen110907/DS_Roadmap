@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Lộ trình 65 tuần: Quant và Data Science</title>
+<title>Lộ trình theo module: Quant và Data Science</title>
 <style>
 :root{--bg:#f8fafc;--sf:#fff;--ink:#0f172a;--mute:#64748b;--line:#e2e8f0;--acc:#2563eb;--accl:#dbeafe;--ok:#10b981;--r:12px;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 @media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#090d16;--sf:#111827;--ink:#f1f5f9;--mute:#94a3b8;--line:#1f2937;--acc:#3b82f6;--accl:#1e293b;--ok:#34d399;color-scheme:dark}}
@@ -54,7 +54,7 @@ details.wk>summary .c{margin-left:auto;font-size:12px;color:var(--mute);font-wei
 </head>
 <body>
 <div class="hd"><div class="w">
- <div class="top"><h1>Lộ trình 65 tuần: Quant và Data</h1>
+ <div class="top"><h1>Lộ trình theo module: Quant và Data</h1>
   <div class="bg">
    <button onclick="exp()">💾 Sao lưu</button>
    <button onclick="document.getElementById('imp').click()">📂 Phục hồi</button><input type="file" id="imp" style="display:none" onchange="load(event)">
@@ -63,27 +63,27 @@ details.wk>summary .c{margin-left:auto;font-size:12px;color:var(--mute);font-wei
   </div></div>
  <div class="pi"><span id="cnt"></span><span id="pct"></span></div>
  <div class="bar"><i id="fill"></i></div>
- <div class="ml">🔴 Tuần bắt buộc (<span id="tn"></span>): <span id="mu"></span></div>
+ <div class="ml">🔴 Module bắt buộc (<span id="tn"></span>): <span id="mu"></span></div>
  <div class="tr">Hướng của bạn:
   <button data-t="q" onclick="trk('q')">📈 Quant</button>
   <button data-t="d" onclick="trk('d')">🏦 DS ngân hàng/fintech</button>
   <button data-t="b" onclick="trk('b')">Cả hai</button>
-  <button id="hide" onclick="hid()">Ẩn tuần ⚪ Để sau</button>
+  <button id="hide" onclick="hid()">Ẩn ⚪ Để sau</button>
  </div>
 </div></div>
 <div class="w">
  <div class="now" id="now"></div>
- <div class="note"><b>Cách dùng:</b> mỗi tuần có 5 ô: Học (60’), Bài tập (90’), Code (60’), Lab, Cổng kiểm tra. Làm đúng thứ tự, 30’ cuối buổi dành cho ghi lỗi và commit Git. Mỗi ngày khoảng 4 giờ: làm xong ô của ngày thì dùng giờ còn lại để làm thêm bài tập trong sách và ôn lỗi đã ghi, không học thêm chủ đề mới. Tuần đệm dùng khi vào mùa thi hoặc bị trễ, chỉ để làm bù; nếu đang kịp tiến độ thì cứ dùng làm tuần ôn tập. Chỉ tick khi tự làm được bài tương tự chưa từng thấy. Mục “Không cần học” là thứ cố ý bỏ qua trong tuần đó, đừng sa vào.<br>Tên bài và số chương lấy từ trang khoá học, nên đối chiếu mục lục vì có thể đã đổi. Hướng ưu tiên: Quant (crypto, chứng khoán); DS ngân hàng/fintech là đường lui, bấm nút hướng để đổi nhãn. Cả 65 tuần đã có chi tiết, đây là bản 1.1 (đã vá trước khi bắt đầu): từ giờ không sửa giáo trình, chỉ học theo. Gần kỳ thi ở trường, chọn tối đa 4 tuần “nhẹ”: chỉ làm Học và Cổng kiểm tra. Thấy thứ gì mới thì ghi vào “Bãi đỗ ý tưởng” cuối trang.</div>
+ <div class="note"><b>Mới bắt đầu, chưa biết gì?</b> Cứ làm module 1 rồi đi lần lượt xuống; mở link ở dòng “Nguồn học” của module; kẹt quá 30’ thì ghi vào danh sách lỗi và đi tiếp.<br><b>Cách dùng:</b> lộ trình chia theo kiến thức (module), mỗi module có số giờ ước tính riêng, ngắn như Git, dài như xác suất. Mỗi bước có 3 ô: Học, Thực hành (bài tập, code, lab gộp lại), Cổng kiểm tra. Chỉ tick Cổng khi tự làm được bài tương tự chưa từng thấy; chưa qua cổng thì ở lại, không sang bước sau. Số tuần chỉ là ước tính: nhập số giờ bạn học được mỗi tuần ở thanh phía trên, trang tự tính ngày dự kiến xong (đã cộng 15% dự phòng cho bài khó và mùa thi nên không còn tuần đệm riêng). Gần kỳ thi ở trường thì giảm giờ/tuần rồi tăng lại sau. Mục “Không cần học” là thứ cố ý bỏ qua, đừng sa vào. Tên bài và số chương lấy từ trang khoá học, nên đối chiếu mục lục vì có thể đã đổi. Hướng ưu tiên: Quant; DS ngân hàng/fintech là đường lui, bấm nút hướng để đổi nhãn. Bản 2.0: từ giờ không sửa giáo trình, chỉ học theo; thấy thứ gì mới thì ghi vào “Bãi đỗ ý tưởng”.</div>
  <div id="root"></div>
- <details class="ph"><summary>Thư viện nguồn học (tất cả, theo chủ đề và tuần)</summary><div class="bd" id="libb"></div></details>
+ <details class="ph"><summary>Thư viện nguồn học (tất cả, theo chủ đề)</summary><div class="bd" id="libb"></div></details>
  <h2 style="margin:28px 0 6px;font-size:17px">Bãi đỗ ý tưởng</h2>
- <p class="st" style="margin:0 0 8px">Thấy khóa học, sách hoặc chủ đề mới? Ghi vào đây rồi quay lại tuần hiện tại, không sửa giáo trình. Để sau khi có việc: Docker/FastAPI, GenAI/RAG, Spark, vi cấu trúc sổ lệnh, on-chain/Dune (<a href="https://docs.dune.com/" target="_blank" rel="noopener">Dune Docs</a>, <a href="https://ethereum.org/en/developers/docs/" target="_blank" rel="noopener">Ethereum Developer Docs</a>), C++.</p>
+ <p class="st" style="margin:0 0 8px">Thấy khóa học, sách hoặc chủ đề mới? Ghi vào đây rồi quay lại module hiện tại, không sửa giáo trình. Để sau khi có việc: Docker/FastAPI, GenAI/RAG, Spark, vi cấu trúc sổ lệnh, on-chain/Dune (<a href="https://docs.dune.com/" target="_blank" rel="noopener">Dune Docs</a>, <a href="https://ethereum.org/en/developers/docs/" target="_blank" rel="noopener">Ethereum Developer Docs</a>), C++.</p>
  <textarea id="park" style="width:100%;min-height:120px;background:var(--sf);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:10px;font:inherit"></textarea>
 </div>
 <script>
-const N=65,DET=65;
-const PH=["Giai đoạn 1: Công cụ và Python (tuần 1–4)", "Giai đoạn 2: Dữ liệu và SQL (tuần 5–12)", "Giai đoạn 3: Toán nền: xác suất, thống kê, đại số, tối ưu (tuần 13–29)", "Giai đoạn 4: ML và chuỗi thời gian (tuần 30–43)", "Giai đoạn 5: Tài chính và backtest (tuần 44–57)", "Giai đoạn 6: Phỏng vấn và nộp đơn (tuần 58–65)"];
-const ph=n=>n<=4?0:n<=12?1:n<=29?2:n<=43?3:n<=57?4:5;
+const N=69,DET=69;
+const PH=["Giai đoạn 1: Công cụ và Python (tuần 1–4)", "Giai đoạn 2: Dữ liệu và SQL (tuần 5–12)", "Giai đoạn 3: Toán nền: xác suất, thống kê, đại số, tối ưu (tuần 13–29)", "Giai đoạn 4: ML và chuỗi thời gian (tuần 30–43)", "Giai đoạn 5: Tài chính và backtest (tuần 44–61)", "Giai đoạn 6: Phỏng vấn và nộp đơn (tuần 62–69)"];
+const ph=n=>n<=4?0:n<=12?1:n<=29?2:n<=43?3:n<=61?4:5;
 const TG={m:"🔴 Phải xong",s:"🔵 Nên có",l:"⚪ Để sau"},RK={m:3,s:2,l:1},TN={q:"Quant",d:"DS ngân hàng/fintech",b:"cả hai hướng"};
 // Tuần chi tiết: [nhãn Quant+DS, tên, mục tiêu, học, bài tập, code, lab, cổng, không cần học]
 const W=[
@@ -95,11 +95,11 @@ const W=[
 ["mm", "pandas chuỗi thời gian và Project 2", "Tính lợi suất, biến động, tương quan", "McKinney chương 8, 10, 11 (ghép bảng, groupby, time series).", "Bài tập resample, rolling, shift, pct_change, merge_asof trên dữ liệu BTC và ETH.", "Project 2: lợi suất ngày, volatility 30 ngày, tương quan BTC với ETH, biểu đồ.", "Kiểm tra timestamp lệch giữa hai nguồn bằng merge_asof.", "Project 2 đạt 7 tiêu chuẩn hoàn thành một project.", "Polars, DuckDB, phân trang API nâng cao."],
 ["mm", "SQL nền", "JOIN, GROUP BY, subquery thành thạo", "SQLBolt: toàn bộ phần truy vấn và JOIN.", "LeetCode SQL 50: hết nhóm Easy, bắt đầu Medium, 3 bài mỗi ngày.", "Cài SQLite, nạp CSV giá nến vào bảng, viết truy vấn JOIN và GROUP BY.", "Viết lại 5 phép tính pandas thành SQL và so kết quả.", "Giải bài JOIN và subquery Medium chưa thấy trong 20 phút.", "Stored procedure, tối ưu index sâu."],
 ["mm", "SQL window và Project 3", "Window function và CSDL giá nến", "Window functions (ROW_NUMBER, RANK, LAG, LEAD, SUM OVER, ROWS BETWEEN) trong tài liệu PostgreSQL. Use The Index, Luke: chỉ đọc phần giới thiệu.", "LeetCode SQL 50: các bài Medium dùng window function.", "Project 3: CSDL SQLite hoặc PostgreSQL nhiều mã, truy vấn lợi suất theo tuần và xếp hạng biến động.", "Chạy EXPLAIN trước và sau khi thêm index.", "Project 3 đạt 7 tiêu chuẩn hoàn thành một project.", "Power BI, Excel (xếp ở giai đoạn 4), NoSQL."],
-["ms", "Dữ liệu thị trường: ccxt, vnstock, API", "Tự kéo dữ liệu crypto và chứng khoán VN ổn định", "Tài liệu ccxt (dữ liệu nến, giới hạn truy cập) và vnstock trên GitHub; McKinney chương 6 (nạp dữ liệu).", "Viết hàm gọi API có phân trang, thử lại khi lỗi, không để API key trong code (dùng biến môi trường).", "Kéo 5 mã crypto và 5 mã VN30, lưu thành parquet hoặc SQLite theo ngày.", "Chạy lại script sau 1 ngày, kiểm tra dữ liệu mới nối đúng và không trùng.", "Script tự cập nhật dữ liệu, không lỗi trong 3 lần chạy liên tiếp.", "Websocket, dữ liệu tick."],
+["ms", "Dữ liệu thị trường: ccxt, vnstock, API", "Tự kéo dữ liệu crypto và chứng khoán VN ổn định", "Tài liệu ccxt (dữ liệu nến, giới hạn truy cập) và vnstock (vnstocks.com; cần đăng ký API key miễn phí, API đã đổi nhiều lần nên làm theo tài liệu bản mới nhất); McKinney chương 6 (nạp dữ liệu).", "Viết hàm gọi API có phân trang, thử lại khi lỗi, không để API key trong code (dùng biến môi trường).", "Kéo 5 mã crypto và 5 mã VN30, lưu thành parquet hoặc SQLite theo ngày.", "Chạy lại script sau 1 ngày, kiểm tra dữ liệu mới nối đúng và không trùng.", "Script tự cập nhật dữ liệu, không lỗi trong 3 lần chạy liên tiếp.", "Websocket, dữ liệu tick."],
 ["ss", "Polars, DuckDB và kiểm tra chất lượng dữ liệu", "Xử lý dữ liệu lớn nhanh và đáng tin", "Polars User Guide (phần lazy) và tài liệu DuckDB (đọc parquet bằng SQL).", "Viết lại 5 phép tính của tuần 7: 5 bằng Polars, 5 bằng DuckDB.", "Truy vấn file parquet của tuần 9 bằng DuckDB, so thời gian với pandas.", "Viết hàm kiểm tra chất lượng: thiếu, trùng, timestamp lệch, giá bất thường.", "Giải thích một lỗi dữ liệu và cách phân biệt nó với biến động thật.", "Spark, Hadoop."],
 ["mm", "Backtest đầu tay (cố tình sai)", "Chạm sớm vào thứ bạn muốn làm và thấy lỗi nằm ở đâu", "backtesting.py hoặc vectorbt: chỉ đọc quickstart. Không cần lý thuyết mới.", "Viết trên giấy quy tắc cắt chéo MA và đoán trước kết quả hơn hay kém buy-and-hold.", "Backtest cắt chéo MA 20/50 cho BTC bằng pandas; lần 1 cố tình dùng tín hiệu cùng ngày (look-ahead), lần 2 shift 1 kỳ.", "Đo chênh lệch đường vốn của hai lần chạy và so với buy-and-hold.", "Giải thích bằng số vì sao lần 1 đẹp hơn mà vô giá trị.", "Tối ưu tham số, thư viện nâng cao. Sẽ học lại đúng cách ở giai đoạn 5."],
 ["mm", "Tuần đệm (làm bù, không học mới)", "Bù ô còn trống và củng cố chỗ yếu", "Xem lại danh sách lỗi đã ghi và chọn 3 chủ đề còn yếu nhất.", "Làm lại các bài đã sai hoặc bỏ dở.", "Dọn code, commit các project đang dở, cập nhật README.", "Chạy lại mọi notebook từ đầu để chắc chắn chạy được.", "Mọi ô của các tuần trước đã tick, hoặc đã ghi lý do bỏ.", "Học nội dung mới."],
-["mm", "Xác suất 1: đếm và có điều kiện", "Nắm Bayes và xác suất có điều kiện", "Stat 110 (Harvard) Lecture 1 đến 5. Đối chiếu mục lục trên trang khoá học.", "Bài tập trong Introduction to Probability (Blitzstein và Hwang), tự giải trước khi xem lời giải.", "Mô phỏng Python: bài sinh nhật, Monty Hall, Bayes cho xét nghiệm bệnh hiếm.", "Mỗi đáp án lý thuyết phải đối chiếu với mô phỏng.", "Tự giải 5 bài xác suất có điều kiện chưa thấy.", "Story proof dài, tổ hợp nâng cao."],
+["mm", "Xác suất 1: đếm và có điều kiện", "Nắm Bayes và xác suất có điều kiện", "Stat 110 (Harvard) Lecture 1 đến 5. Đối chiếu mục lục trên trang khoá học.", "Bài tập trong Introduction to Probability (Blitzstein và Hwang), chọn khoảng một nửa số bài (ưu tiên bài có lời giải); kẹt quá 30 phút thì xem lời giải rồi tự làm lại.", "Mô phỏng Python: bài sinh nhật, Monty Hall, Bayes cho xét nghiệm bệnh hiếm.", "Mỗi đáp án lý thuyết phải đối chiếu với mô phỏng.", "Tự giải 5 bài xác suất có điều kiện chưa thấy.", "Story proof dài, tổ hợp nâng cao."],
 ["mm", "Xác suất 2: kỳ vọng và Gambler’s Ruin", "Tính kỳ vọng và xác suất phá sản", "Stat 110 Lecture 6 đến 10 (biến ngẫu nhiên, Gambler’s Ruin, kỳ vọng, tuyến tính của kỳ vọng).", "Bài tập kỳ vọng và indicator trong sách đi kèm.", "Mô phỏng Gambler’s Ruin với nhiều mức vốn và xác suất thắng.", "Đối chiếu công thức với mô phỏng.", "Tính xác suất cháy tài khoản bằng công thức rồi đối chiếu mô phỏng Python.", "Martingale chính quy."],
 ["mm", "Xác suất 3: phân phối", "Dùng đúng Nhị thức, Poisson, Chuẩn", "Stat 110 Lecture 11 đến 15 (Nhị thức, Poisson, Chuẩn). Đối chiếu mục lục.", "Bài tập phân phối trong sách đi kèm.", "Vẽ phân phối lý thuyết đè lên histogram lợi suất BTC.", "Kiểm tra lợi suất BTC có giống phân phối Chuẩn không.", "Giải thích bằng số liệu vì sao lợi suất tài chính có đuôi dày.", "Hàm sinh moment."],
 ["mm", "Xác suất 3b: biến ngẫu nhiên nhiều chiều, hiệp phương sai", "Hiểu hiệp phương sai, tương quan, kỳ vọng có điều kiện (nền cho PCA, Markowitz)", "Stat 110: các bài về phân phối đồng thời, hiệp phương sai, tương quan, kỳ vọng có điều kiện (tra mục lục khoá học).", "Bài tập phân phối đồng thời và hiệp phương sai trong sách Blitzstein; tự chứng minh Var(X+Y)=Var(X)+Var(Y)+2Cov(X,Y).", "Mô phỏng hai biến chuẩn tương quan; tính ma trận hiệp phương sai lợi suất BTC, ETH và so với np.cov.", "Vẽ scatter ở rho = 0, 0.5, -0.9 và đối chiếu hệ số tương quan mẫu.", "Tính tay phương sai của danh mục hai tài sản rồi đối chiếu bằng mô phỏng.", "Chuẩn nhiều chiều tổng quát, copula."],
@@ -116,15 +116,15 @@ const W=[
 ["ms", "Giải tích nhiều biến, nhân tử Lagrange", "Tối ưu có ràng buộc bằng tay và bằng code", "3Blue1Brown: Essence of Calculus. Boyd, Convex Optimization: chương 1–2 (giới thiệu, tập lồi).", "Tính gradient và Hessian tay cho 5 hàm nhiều biến; giải 3 bài tối ưu có ràng buộc bằng Lagrange.", "Dùng scipy.optimize.minimize tối ưu danh mục 3 mã với tổng tỷ trọng bằng 1; đối chiếu với nghiệm Lagrange tính tay.", "Vẽ đường đồng mức và gradient của một hàm hai biến.", "Giải bài tối ưu có ràng buộc chưa thấy bằng Lagrange trong 20 phút.", "Điều kiện KKT chi tiết, tối ưu phi lồi."],
 ["ms", "Gradient Descent tự viết", "Hiểu thuật toán nằm dưới mọi mô hình ML", "Andrew Ng, Machine Learning Specialization: phần gradient descent cho hồi quy tuyến tính. Boyd chương 9: chỉ đọc phần giới thiệu.", "Suy ra đạo hàm hàm mất mát MSE bằng tay; giải thích learning rate quá lớn và quá nhỏ.", "Tự viết gradient descent cho hồi quy tuyến tính bằng NumPy, thêm momentum, vẽ đường hội tụ.", "So kết quả với nghiệm OLS của tuần 20.", "Viết lại gradient descent từ đầu không xem lại, kết quả khớp OLS đến 4 chữ số thập phân.", "Adam, tối ưu bậc hai."],
 ["mm", "Tuần đệm (làm bù, không học mới)", "Bù ô còn trống và củng cố chỗ yếu", "Xem lại danh sách lỗi đã ghi và chọn 3 chủ đề còn yếu nhất.", "Làm lại các bài đã sai hoặc bỏ dở.", "Dọn code, commit các project đang dở, cập nhật README.", "Chạy lại mọi notebook từ đầu để chắc chắn chạy được.", "Mọi ô của các tuần trước đã tick, hoặc đã ghi lý do bỏ.", "Học nội dung mới."],
-["mm", "ML nền: train/val/test, cross-validation", "Chia dữ liệu và đánh giá đúng", "ISLP chương 5 (resampling). Andrew Ng, ML Specialization: khóa 1–2.", "Bài tập chương 5; tính tay k-fold cho 10 điểm.", "Pipeline scikit-learn: chia train/val/test, k-fold, so 3 mô hình trên dữ liệu BTC.", "Vẽ đường học (learning curve) cho bias-variance.", "Giải thích bias-variance bằng đồ thị của chính bạn.", "Neural network sâu."],
+["mm", "ML nền: train/val/test, cross-validation", "Chia dữ liệu và đánh giá đúng", "ISLP chương 5 (resampling). Andrew Ng, ML Specialization: khóa 1 (hồi quy, phân loại); khóa 2 chỉ xem phần cây quyết định, bỏ neural network.", "Bài tập chương 5; tính tay k-fold cho 10 điểm.", "Pipeline scikit-learn: chia train/val/test, k-fold, so 3 mô hình trên dữ liệu BTC.", "Vẽ đường học (learning curve) cho bias-variance.", "Giải thích bias-variance bằng đồ thị của chính bạn.", "Neural network sâu."],
 ["mm", "Regularization, cây quyết định, Random Forest", "Chống overfit bằng phạt và cây", "ISLP chương 6 (Ridge, Lasso) và chương 8 (cây, Random Forest).", "Bài tập chương 6 và 8; tính tay Gini cho một lần tách cây.", "Ridge/Lasso và Random Forest trên dữ liệu giá; so với hồi quy thường.", "Chọn alpha bằng cross-validation.", "Giải thích vì sao Lasso đưa hệ số về 0 còn Ridge thì không.", "SVM, neural network."],
 ["mm", "XGBoost/LightGBM, feature engineering", "Mô hình mạnh nhất cho dữ liệu bảng", "Tài liệu XGBoost và LightGBM (Getting Started); ISLP chương 8 phần boosting.", "Giải thích gradient boosting bằng lời và vẽ 3 bước lặp.", "Train XGBoost dự đoán hướng giá, tinh chỉnh tham số có kiểm soát.", "Tạo 10 đặc trưng từ giá (động lượng, biến động) và đo độ quan trọng.", "Nêu số liệu: mô hình có thắng baseline đơn giản ngoài mẫu không.", "Bayesian optimization."],
-["mm", "Chống look-ahead và leakage, Purged CV", "Không để dữ liệu tương lai rò vào huấn luyện", "López de Prado, Advances in Financial ML: chương cross-validation trong tài chính (Purged, Embargo).", "Vẽ sơ đồ k-fold thường và Purged k-fold trên trục thời gian.", "Cài hàm Purged K-Fold có embargo và so điểm với k-fold thường.", "Cố ý tạo leakage (dùng giá ngày mai) và đo mức điểm ảo.", "Chỉ ra 3 nguồn look-ahead bias trong pipeline của bạn.", "Combinatorial Purged CV."],
+["mm", "Chống look-ahead và leakage, Purged CV", "Không để dữ liệu tương lai rò vào huấn luyện", "López de Prado, Advances in Financial ML: chương cross-validation trong tài chính (Purged, Embargo). Sách khó: đọc để hiểu ý tưởng, không cần tái hiện từng dòng code.", "Vẽ sơ đồ k-fold thường và Purged k-fold trên trục thời gian.", "Cài hàm Purged K-Fold có embargo và so điểm với k-fold thường.", "Cố ý tạo leakage (dùng giá ngày mai) và đo mức điểm ảo.", "Chỉ ra 3 nguồn look-ahead bias trong pipeline của bạn.", "Combinatorial Purged CV."],
 ["sl", "Triple Barrier, gán nhãn", "Gán nhãn theo chốt lời, cắt lỗ", "López de Prado: chương gán nhãn (Triple Barrier, meta-labeling).", "Tính tay nhãn cho 5 điểm với chốt lời, cắt lỗ, giới hạn thời gian.", "Cài Triple Barrier bằng pandas, huấn luyện mô hình trên nhãn mới.", "So kết quả với nhãn cố định theo ngày.", "Giải thích vì sao nhãn theo ngày cố định gây sai lệch.", "Fractional differentiation."],
 ["sm", "Phân loại thực tế: mất cân bằng, ROC/PR-AUC, SHAP", "Đánh giá và giải thích mô hình phân loại", "Tài liệu scikit-learn: metrics, class_weight, calibration; tài liệu SHAP.", "Tính tay precision, recall, ROC-AUC cho bảng nhầm lẫn nhỏ.", "Dữ liệu mất cân bằng: class_weight, chọn ngưỡng, PR-AUC, giải thích bằng SHAP.", "Phân tích 20 dự đoán sai nhiều nhất.", "Chọn ngưỡng cắt và giải thích đánh đổi bằng số liệu.", "Deep learning cho dữ liệu bảng."],
-["ms", "Chuỗi thời gian 1: tính dừng, ADF, ACF/PACF", "Biết chuỗi nào dừng, chuỗi nào không", "Hyndman FPP3: chương tính dừng và ACF; statsmodels: adfuller.", "Làm toán AR(1), MA(1): tính ACF lý thuyết.", "ADF test và ACF/PACF cho giá và lợi suất log của BTC.", "Biến đổi giá thành chuỗi dừng bằng sai phân.", "Phân biệt giá (không dừng) và lợi suất (dừng) bằng số liệu.", "Kalman filter."],
+["ms", "Chuỗi thời gian 1: tính dừng, ADF, ACF/PACF", "Biết chuỗi nào dừng, chuỗi nào không", "Hyndman FPP3: chương tính dừng và ACF (sách viết bằng R: đọc lý thuyết, tự làm bằng Python); statsmodels: adfuller.", "Làm toán AR(1), MA(1): tính ACF lý thuyết.", "ADF test và ACF/PACF cho giá và lợi suất log của BTC.", "Biến đổi giá thành chuỗi dừng bằng sai phân.", "Phân biệt giá (không dừng) và lợi suất (dừng) bằng số liệu.", "Kalman filter."],
 ["ms", "Chuỗi thời gian 2: ARIMA và dự báo", "Dự báo và so với baseline", "Hyndman FPP3: chương ARIMA; statsmodels: ARIMA.", "Chọn bậc (p,d,q) bằng tay từ ACF/PACF.", "Fit ARIMA, dự báo 30 ngày, so với baseline naive.", "Kiểm tra phần dư bằng Ljung-Box.", "Chứng minh mô hình có thắng baseline naive ngoài mẫu hay không.", "SARIMA, VAR."],
-["ms", "GARCH và volatility", "Dự báo biến động giá", "Tài liệu arch; Hyndman FPP3 phần biến động.", "Giải thích volatility clustering và công thức GARCH(1,1).", "Fit GARCH(1,1) cho lợi suất BTC, dự báo biến động ngày mai.", "So với độ lệch chuẩn trượt 30 ngày.", "Đánh giá dự báo biến động ngoài mẫu bằng sai số cụ thể.", "EGARCH, GJR."],
+["ms", "GARCH và volatility", "Dự báo biến động giá", "Tài liệu arch (ví dụ GARCH); Ruppert, Statistics and Data Analysis for Financial Engineering: chương GARCH.", "Giải thích volatility clustering và công thức GARCH(1,1).", "Fit GARCH(1,1) cho lợi suất BTC, dự báo biến động ngày mai.", "So với độ lệch chuẩn trượt 30 ngày.", "Đánh giá dự báo biến động ngoài mẫu bằng sai số cụ thể.", "EGARCH, GJR."],
 ["ms", "Walk-forward, đánh giá ngoài mẫu", "Đánh giá đúng cho chuỗi thời gian", "Hyndman FPP3: đánh giá dự báo, cross-validation chuỗi thời gian.", "Thiết kế cửa sổ walk-forward trên giấy.", "Cài walk-forward cho mô hình của tuần 32 và 38.", "So walk-forward với k-fold thường.", "Giải thích vì sao k-fold thường sai với chuỗi thời gian.", "Online learning."],
 ["lm", "Scorecard tín dụng: WoE, IV, KS, PSI", "Làm credit scoring đúng kiểu ngân hàng", "ISLP chương 4 (logistic). Tài liệu optbinning và bài viết về scorecard: binning, WoE, IV.", "Tính tay WoE và IV cho một biến 4 nhóm; giải thích vì sao IV quá cao là dấu hiệu leakage.", "Binning 3 biến, tính WoE/IV, fit logistic trên biến WoE, tính KS và Gini.", "Tính PSI giữa tập train và tập test, giải thích ngưỡng.", "Giải thích cho người không chuyên: WoE, KS, PSI cho biết điều gì về mô hình.", "Reject inference, Basel chi tiết."],
 ["sm", "Project 5 (phần 1): credit scoring hoặc fraud", "Dựng baseline cho đường lui ngân hàng", "ISLP chương 4; scikit-learn: xử lý mất cân bằng.", "Lập kế hoạch Project 5: bài toán, dữ liệu Kaggle, chỉ số, baseline.", "Làm sạch dữ liệu credit scoring hoặc fraud, baseline logistic.", "Kiểm tra leakage trong đặc trưng.", "Có baseline và chỉ số đánh giá rõ trước khi thử mô hình mạnh hơn.", "AutoML."],
@@ -132,20 +132,24 @@ const W=[
 ["mm", "Tuần đệm (làm bù, không học mới)", "Bù ô còn trống và củng cố chỗ yếu", "Xem lại danh sách lỗi đã ghi và chọn 3 chủ đề còn yếu nhất.", "Làm lại các bài đã sai hoặc bỏ dở.", "Dọn code, commit các project đang dở, cập nhật README.", "Chạy lại mọi notebook từ đầu để chắc chắn chạy được.", "Mọi ô của các tuần trước đã tick, hoặc đã ghi lý do bỏ.", "Học nội dung mới."],
 ["ms", "Sharpe, Sortino, drawdown", "Đo hiệu suất như quỹ", "Quantitative Trading (Chan): chương đánh giá hiệu suất; Investor.gov.", "Tính tay Sharpe, Sortino, max drawdown cho chuỗi 10 ngày.", "Viết class đánh giá danh mục: nhận chuỗi giá, trả đủ chỉ số.", "Đối chiếu với kết quả của vectorbt.", "Số của bạn khớp thư viện tới 3 chữ số thập phân.", "Omega ratio."],
 ["ms", "Kelly, VaR, quản trị vốn", "Quyết định cỡ lệnh bằng toán", "Quantitative Trading (Chan): chương quản trị vốn; Green Book: phần Kelly.", "Suy ra Kelly cho cược thắng/thua bằng tay.", "Mô phỏng Kelly đầy đủ, nửa Kelly, cược cố định; tính VaR lịch sử.", "Backtest VaR 95% và đếm số lần vi phạm.", "Giải thích vì sao Kelly đầy đủ rủi ro cao trong thực tế.", "Expected Shortfall nâng cao."],
-["ms", "Danh mục: Markowitz, CAPM, CVXPY", "Tối ưu danh mục có ràng buộc thực tế", "CVXPY: ví dụ portfolio optimization; Chan: Markowitz, CAPM.", "Suy ra danh mục phương sai tối thiểu bằng Lagrange.", "CVXPY: tối ưu Markowitz VN30, tỷ trọng tối đa 20%, dùng Ledoit-Wolf.", "Vẽ biên hiệu quả.", "So danh mục tối ưu với chia đều 1/N ngoài mẫu và giải thích.", "Black-Litterman."],
+["ms", "Danh mục: Markowitz, CAPM, CVXPY", "Tối ưu danh mục có ràng buộc thực tế", "CVXPY: ví dụ portfolio optimization; Bodie–Kane–Marcus, Investments: chương Markowitz và CAPM.", "Suy ra danh mục phương sai tối thiểu bằng Lagrange.", "CVXPY: tối ưu Markowitz VN30, tỷ trọng tối đa 20%, dùng Ledoit-Wolf.", "Vẽ biên hiệu quả.", "So danh mục tối ưu với chia đều 1/N ngoài mẫu và giải thích.", "Black-Litterman."],
+["ss", "Tài chính nền: lãi suất, trái phiếu, báo cáo tài chính", "Hiểu ngôn ngữ thị trường trước khi mô hình hóa", "Khan Academy: Finance and capital markets (mục lãi suất, trái phiếu, cổ phiếu); Investor.gov: cách đọc báo cáo tài chính (bảng cân đối, kết quả kinh doanh, lưu chuyển tiền tệ).", "Tính tay giá trị hiện tại và lợi suất đáo hạn của trái phiếu 3 năm; đọc báo cáo tài chính một công ty VN30 và tính ROE, P/E.", "Viết hàm tính PV, YTM và vẽ quan hệ giá trái phiếu với lãi suất.", "Tự tính ROE và P/E của một mã từ số liệu trong báo cáo, không dùng web tính sẵn.", "Giải thích vì sao lãi suất tăng thì giá trái phiếu giảm, kèm số liệu.", "Phái sinh lãi suất, kế toán nâng cao."],
+["ms", "Mô hình nhân tố: CAPM và Fama-French", "Biết lợi suất cổ phiếu được giải thích bằng những nhân tố nào", "Bodie–Kane–Marcus, Investments: chương mô hình đa nhân tố; Kenneth French Data Library: mô tả các nhân tố thị trường, quy mô, giá trị.", "Ước lượng beta bằng tay (cov/var) cho 3 cổ phiếu so với chỉ số.", "Hồi quy lợi suất 10 mã VN30 theo thị trường, rồi thêm một nhân tố tự dựng (động lượng 12 tháng); so R-squared.", "Phân biệt alpha và beta trong kết quả hồi quy.", "Giải thích alpha và beta của một mã bằng lời và nói alpha có ý nghĩa thống kê hay không.", "APT chi tiết, mô hình 5 nhân tố."],
+["ms", "Kinh tế lượng tài chính: hồi quy giả, sai số chuẩn HAC", "Tránh kết luận sai khi hồi quy dữ liệu giá", "Ruppert, Statistics and Data Analysis for Financial Engineering: chương hồi quy và chuỗi thời gian; tài liệu statsmodels: sai số chuẩn HAC (Newey-West).", "Giải thích bằng lời vì sao hồi quy hai chuỗi giá (không dừng) có thể cho R-squared cao mà vô nghĩa.", "Mô phỏng 2 bước ngẫu nhiên độc lập, hồi quy chúng, đếm tỷ lệ p<0.05; so sai số chuẩn thường với HAC trên hồi quy lợi suất BTC–ETH.", "Lặp lại thí nghiệm trên lợi suất thay vì giá.", "Chứng minh bằng mô phỏng rằng hồi quy giá với giá cho kết quả có ý nghĩa giả, và nêu cách tránh.", "Hồi quy panel, GMM."],
+["sl", "Stochastic calculus nhập môn: Brownian motion, Itô", "Hiểu nguồn gốc của Black-Scholes, không học thuộc công thức", "Hull, Options, Futures and Other Derivatives: chương quá trình Wiener và bổ đề Itô; Shreve, Stochastic Calculus for Finance II: chương 3 và phần đầu chương 4 (đọc trực giác, bỏ chứng minh).", "Tính tay E[W_t], Var[W_t]; dùng bổ đề Itô để ra phương trình của ln S khi giá theo GBM.", "Mô phỏng 1.000 đường Brownian motion và GBM bằng NumPy; kiểm tra giá cuối kỳ có phân phối log-chuẩn.", "So kỳ vọng và phương sai mô phỏng với công thức lý thuyết.", "Giải thích bằng lời vì sao ln S có độ trôi μ - σ²/2 chứ không phải μ.", "Chứng minh chặt chẽ, đổi độ đo, Girsanov."],
 ["sl", "Quyền chọn 1: Black-Scholes", "Định giá quyền chọn cơ bản", "Hull: chương Black-Scholes-Merton; Green Book: phần option.", "Tính tay giá call bằng cây nhị phân 2 bước.", "Cài Black-Scholes bằng Python, so với cây nhị phân.", "Vẽ giá option theo giá cơ sở.", "Tính được giá option bằng tay hoặc Excel.", "Stochastic calculus sâu."],
 ["sl", "Quyền chọn 2: Greeks, put-call parity", "Hiểu độ nhạy của option", "Hull: chương Greeks; Green Book: put-call parity.", "Tính tay Delta, Gamma của call; kiểm chứng put-call parity.", "Tính Greeks bằng Python và mô phỏng delta hedging.", "Đo sai số hedge khi đổi tần suất hedge.", "Giải thích Delta, Gamma, Vega bằng lời.", "Exotic options."],
 ["ms", "Tự viết backtest bằng pandas", "Hiểu bản chất trước khi dùng thư viện", "vectorbt và backtesting.py: chỉ đọc quickstart.", "Viết logic tín hiệu và vào lệnh trên giấy.", "Tự viết backtest cắt chéo MA bằng pandas, chia in-sample và out-of-sample.", "Đối chiếu kết quả với backtesting.py.", "Giải thích vì sao tín hiệu phải shift 1 kỳ.", "Event-driven phức tạp."],
 ["mm", "Bẫy dữ liệu backtest: survivorship, giá điều chỉnh", "Tránh các lỗi dữ liệu làm backtest đẹp giả", "Tài liệu nhà cung cấp dữ liệu về giá điều chỉnh (chia tách, cổ tức); Chan: phần survivorship bias.", "Liệt kê 5 cách dữ liệu làm backtest đẹp giả: coin đã chết, cổ phiếu hủy niêm yết, dùng danh sách VN30 hiện tại cho quá khứ, giá chưa điều chỉnh, dữ liệu bị sửa về sau.", "Backtest cùng chiến lược với giá điều chỉnh và chưa điều chỉnh; với danh sách mã hiện tại và danh sách mã theo từng thời điểm.", "Đo chênh lệch kết quả, ghi vào README của Project 4.", "Chỉ ra bẫy nào ảnh hưởng nhất đến dữ liệu của bạn và cách giảm.", "Dữ liệu point-in-time trả phí."],
 ["ms", "Chi phí, slippage, thị trường VN, phái sinh crypto", "Để backtest gần với thực tế", "HOSE (hsx.vn): quy định giao dịch hiện hành; tài liệu sàn về funding rate và thanh lý.", "Liệt kê quy tắc thị trường VN cần đưa vào backtest. Lưu ý: cá nhân thường không bán khống được cổ phiếu VN (kiểm tra quy định hiện hành), nên chiến lược long-short chủ yếu thử trên crypto.", "Thêm phí, slippage, lô chẵn 100 cổ phiếu, biên độ giá vào backtest.", "Đo lợi nhuận còn lại sau chi phí.", "Kiểm tra quy định hiện hành trước khi backtest VN30.", "Phái sinh VN."],
-["sl", "Pairs trading, cointegration", "Giao dịch cặp tài sản", "Quantitative Trading (Chan): chương mean reversion, cointegration.", "Phân biệt tương quan và đồng liên kết bằng ví dụ. Ưu tiên thử trên crypto; với cổ phiếu VN xem lưu ý về bán khống ở tuần chi phí.", "Tìm cặp cointegrated, vẽ spread, kiểm tra bằng ADF.", "Backtest pairs có chi phí.", "Giải thích vì sao tương quan cao chưa chắc đồng liên kết.", "Kalman filter cho hedge ratio."],
+["sl", "Pairs trading, cointegration", "Giao dịch cặp tài sản", "Algorithmic Trading (Chan, 2013): chương mean reversion, cointegration.", "Phân biệt tương quan và đồng liên kết bằng ví dụ. Ưu tiên thử trên crypto; với cổ phiếu VN xem lưu ý về bán khống ở tuần chi phí.", "Tìm cặp cointegrated, vẽ spread, kiểm tra bằng ADF.", "Backtest pairs có chi phí.", "Giải thích vì sao tương quan cao chưa chắc đồng liên kết.", "Kalman filter cho hedge ratio."],
 ["ml", "Nghiên cứu alpha: rank, neutralization", "Xây tín hiệu theo cách các quỹ làm", "WorldQuant Learn2Quant; nền tảng BRAIN.", "Làm bài về rank và chuẩn hóa tín hiệu.", "Xây tín hiệu alpha, rank cắt ngang mã, neutralize theo thị trường.", "Tính IC của tín hiệu.", "Giải thích rank và neutralization giải quyết vấn đề gì.", "Alpha phức tạp."],
 ["ms", "Project 4 (phần 1): chiến lược và tín hiệu", "Bắt đầu dự án quan trọng nhất", "Quantitative Trading (Chan); vectorbt docs.", "Viết giả thuyết chiến lược và tiêu chí đánh giá trước khi chạy.", "Dựng pipeline dữ liệu và tín hiệu cho BTC hoặc VN30.", "Chốt baseline buy-and-hold.", "Giả thuyết và tiêu chí được ghi trước khi nhìn kết quả.", "Chiến lược mới."],
 ["ms", "Project 4 (phần 2): overfitting, Deflated Sharpe", "Đánh giá trung thực", "López de Prado: chương thống kê backtest (Deflated Sharpe).", "Đếm và ghi số biến thể đã thử.", "Chạy backtest có phí, tính Deflated Sharpe.", "Đánh giá out-of-sample bằng walk-forward.", "Ghi đủ số biến thể đã thử và kết quả trừ phí.", "Tối ưu tham số thêm."],
 ["ms", "Project 4 hoàn thiện: README “Vì sao kết quả có thể là ảo”", "Hoàn thiện dự án quan trọng nhất", "Cách viết README project (7 tiêu chuẩn).", "Viết mục “Vì sao kết quả này có thể là ảo”.", "Hoàn thiện biểu đồ, README tiếng Anh, test.", "Nhờ AI đóng vai người phỏng vấn vặn về project.", "Project 4 đạt 7 tiêu chuẩn và so với buy-and-hold.", "Tính năng mới."],
 ["mm", "Tuần đệm (làm bù, không học mới)", "Bù ô còn trống và củng cố chỗ yếu", "Xem lại danh sách lỗi đã ghi và chọn 3 chủ đề còn yếu nhất.", "Làm lại các bài đã sai hoặc bỏ dở.", "Dọn code, commit các project đang dở, cập nhật README.", "Chạy lại mọi notebook từ đầu để chắc chắn chạy được.", "Mọi ô của các tuần trước đã tick, hoặc đã ghi lý do bỏ.", "Học nội dung mới."],
 ["ml", "Giải thuật 1: Big-O, mảng, hash map", "Rèn tư duy cho vòng code", "NeetCode Roadmap: Arrays & Hashing, Two Pointers, Sliding Window; VisuAlgo.", "Giải 15 bài LeetCode Easy về mảng và hash map.", "Cài Two Pointers và Sliding Window bằng Python.", "Ghi Big-O mỗi bài.", "Giải bài Easy trong 15–20 phút và giải thích Big-O.", "Đồ thị, DP."],
-["ml", "Giải thuật 2: stack, heap, binary search, đệ quy", "Cấu trúc dữ liệu còn lại", "NeetCode: Stack, Binary Search, Heap, đệ quy.", "Giải 10 bài Medium.", "Cài binary search và heap bằng Python.", "Giải lại bài đã sai.", "Giải 1 bài Medium trong 30 phút.", "Đồ thị nâng cao."],
+["ml", "Giải thuật 2: stack, heap, binary search, đệ quy", "Cấu trúc dữ liệu còn lại", "NeetCode: Stack, Binary Search, Heap, đệ quy, Trees, Graphs (BFS/DFS bản cơ bản).", "Giải 15 bài Medium.", "Cài binary search và heap bằng Python.", "Giải lại bài đã sai.", "Giải 1 bài Medium trong 30 phút.", "Đồ thị nâng cao."],
 ["mm", "Brain Teasers xác suất 1", "Luyện đề phỏng vấn quant", "Green Book: các chương xác suất và brain teasers.", "Tự giải 20 bài trước khi xem lời giải.", "Kiểm chứng 5 bài bằng mô phỏng Python.", "Ghi lại các dạng bài hay sai.", "Giải 70% bài tự lực.", "Sách khác."],
 ["mm", "Brain Teasers 2 và câu hỏi thống kê", "Nói to cách tư duy", "Green Book: phần thống kê và option; Heard on the Street.", "Tự giải 20 bài.", "Mô phỏng các bài khó.", "Tập nói to cách giải trong 3 phút.", "Nói to cách giải một bài chưa thấy, có bấm giờ.", "Bài quá khó."],
 ["mm", "Tiếng Anh kỹ thuật: README, CV", "Trình bày project bằng tiếng Anh", "Đọc 3 README project nổi tiếng trên GitHub.", "Viết lại README Project 4 bằng tiếng Anh.", "Thu video 5 phút giải thích project bằng tiếng Anh.", "Dịch 10 thuật ngữ: p-value, bias-variance, drawdown.", "Giải thích một project 5 phút bằng tiếng Anh, không đọc script.", "Luyện thi chứng chỉ."],
@@ -153,13 +157,6 @@ const W=[
 ["mm", "CV, GitHub, phỏng vấn thử với AI", "Sẵn sàng để nộp", "Mẫu CV kỹ thuật một trang; GitHub profile README.", "Viết CV tiếng Anh với 4–5 project.", "Dọn repo: README, cấu trúc, test.", "Phỏng vấn thử với AI đóng vai người hỏi khó.", "CV một trang và 4 repo chạy lại được.", "Thiết kế CV cầu kỳ."],
 ["mm", "Nộp đơn, phỏng vấn thật, vá lỗ hổng", "Thực chiến và học từ thất bại", "DataLemur, StrataScratch: luyện câu hỏi SQL và phân tích thật.", "Làm 20 câu SQL và thống kê của công ty thật.", "Nộp ít nhất 5 vị trí thực tập, ghi lại mọi câu hỏi.", "Vá lỗ hổng từ câu hỏi đã gặp.", "Hoàn thành ít nhất 3 buổi phỏng vấn thật hoặc thử.", "Chờ hoàn hảo mới nộp."]
 ];
-const O=[];
-const K=[["l","Học · 60’"],["d","Bài tập · 90’"],["c","Code · 60’"],["x","Lab"],["g","Cổng kiểm tra"]];
-const KEY="lt65_done",SK="lt65_start",TK="lt65_track",HK="lt65_hide",PK="lt65_park";
-let D={},TRACK="q",START="",HIDE=false;
-const $=id=>document.getElementById(id);
-const rd=k=>{try{return localStorage.getItem(k)}catch(e){return null}},wr=(k,v)=>{try{localStorage.setItem(k,v)}catch(e){}};
-// Nguồn học: [từ tuần, đến tuần, tên nhóm, [[nhãn, link]]]
 const SRC=[
 [1,2,"Terminal và Git",[["The Missing Semester (MIT)","https://missing.csail.mit.edu/"],["Pro Git","https://git-scm.com/book/en/v2"]]],
 [3,4,"Python",[["CS50P (Harvard)","https://cs50.harvard.edu/python/"],["Kaggle Learn: Python","https://www.kaggle.com/learn/python"],["Effective Python / Fluent Python (sách)"]]],
@@ -172,74 +169,102 @@ const SRC=[
 [24,26,"Đại số tuyến tính",[["3Blue1Brown: Linear Algebra","https://www.3blue1brown.com/topics/linear-algebra"],["MIT 18.06 (Strang)","https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/"],["CVXPY","https://www.cvxpy.org/"]]],
 [27,28,"Giải tích và tối ưu",[["3Blue1Brown: Calculus","https://www.3blue1brown.com/topics/calculus"],["Convex Optimization (Boyd)","https://web.stanford.edu/~boyd/cvxbook/"]]],
 [30,35,"Machine Learning",[["ISLP","https://www.statlearning.com/"],["Machine Learning Specialization (Andrew Ng)","https://www.coursera.org/specializations/machine-learning-introduction"],["Advances in Financial Machine Learning (López de Prado, sách)"],["ML for Algorithmic Trading (Jansen)","https://github.com/stefan-jansen/machine-learning-for-trading"]]],
-[36,39,"Chuỗi thời gian",[["Forecasting: Principles and Practice (Hyndman)","https://otexts.com/fpp3/"],["statsmodels","https://www.statsmodels.org/"],["arch","https://arch.readthedocs.io/"]]],
+[36,39,"Chuỗi thời gian",[["Forecasting: Principles and Practice (Hyndman)","https://otexts.com/fpp3/"],["statsmodels","https://www.statsmodels.org/"],["arch","https://arch.readthedocs.io/"],["Ruppert (sách, chương GARCH)"]]],
 [40,40,"Credit scoring",[["optbinning","https://gnpalencia.org/optbinning/"]]],
 [41,42,"Project 5 và BI",[["Power BI docs","https://learn.microsoft.com/en-us/power-bi/"],["Tableau Public","https://public.tableau.com/"],["ISLP","https://www.statlearning.com/"]]],
-[44,48,"Tài chính, danh mục, quyền chọn",[["Investor.gov","https://www.investor.gov/"],["Quantitative Trading (Ernest Chan, sách)"],["Options, Futures, and Other Derivatives (Hull, sách)"],["Green Book (Xinfeng Zhou, chương option)"],["CVXPY","https://www.cvxpy.org/"]]],
-[49,56,"Backtest",[["vectorbt","https://vectorbt.dev/"],["backtesting.py","https://kernc.github.io/backtesting.py/"],["WorldQuant Learn2Quant","https://www.worldquant.com/learn2quant/"],["QuantConnect","https://www.quantconnect.com/"],["HOSE","https://www.hsx.vn/"],["Quantitative Trading (Chan, sách)"],["Trades, Quotes and Prices (Bouchaud, sách)"]]],
-[58,59,"Giải thuật",[["NeetCode Roadmap","https://neetcode.io/roadmap"],["VisuAlgo","https://visualgo.net/en"]]],
-[60,65,"Phỏng vấn và nộp đơn",[["A Practical Guide to Quantitative Finance Interviews (Green Book, sách)"],["Heard on the Street (Crack, sách)"],["DataLemur","https://datalemur.com/"],["StrataScratch","https://www.stratascratch.com/"],["Codeforces","https://codeforces.com/"],["Project Euler","https://projecteuler.net/"]]]];
+[44,52,"Tài chính, danh mục, quyền chọn",[["Investor.gov","https://www.investor.gov/"],["Khan Academy: Finance and capital markets"],["Bodie–Kane–Marcus, Investments (sách)"],["Kenneth French Data Library","https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html"],["Ruppert, Statistics and Data Analysis for Financial Engineering (sách)"],["Shreve, Stochastic Calculus for Finance II (sách)"],["Quantitative Trading (Ernest Chan, sách)"],["Options, Futures, and Other Derivatives (Hull, sách)"],["Green Book (Xinfeng Zhou, chương option)"],["CVXPY","https://www.cvxpy.org/"]]],
+[53,60,"Backtest",[["vectorbt","https://vectorbt.dev/"],["backtesting.py","https://kernc.github.io/backtesting.py/"],["WorldQuant Learn2Quant","https://www.worldquant.com/learn2quant/"],["QuantConnect","https://www.quantconnect.com/"],["HOSE","https://www.hsx.vn/"],["Quantitative Trading (Chan, sách)"],["Algorithmic Trading (Chan, sách)"],["Trades, Quotes and Prices (Bouchaud, sách)"]]],
+[62,63,"Giải thuật",[["NeetCode Roadmap","https://neetcode.io/roadmap"],["VisuAlgo","https://visualgo.net/en"]]],
+[64,69,"Phỏng vấn và nộp đơn",[["A Practical Guide to Quantitative Finance Interviews (Green Book, sách)"],["Heard on the Street (Crack, sách)"],["DataLemur","https://datalemur.com/"],["StrataScratch","https://www.stratascratch.com/"],["Codeforces","https://codeforces.com/"],["Project Euler","https://projecteuler.net/"]]]];
 const CRIT=`<p style="margin:12px 0 2px;font-weight:700">7 tiêu chuẩn hoàn thành một project</p><p class="sk" style="margin:0">1) README nêu câu hỏi, dữ liệu, cách chạy lại · 2) Chạy lại được từ đầu (requirements, seed cố định) · 3) Có baseline đơn giản để so · 4) Có test cho phần logic chính · 5) Có biểu đồ hoặc bảng kết quả kèm lời giải thích · 6) Có mục “Hạn chế”: kết quả không chứng minh điều gì · 7) Ghi số biến thể đã thử, commit Git sạch.</p>`;
 const lk=l=>l[1]?`<a href="${l[1]}" target="_blank" rel="noopener">${l[0]}</a>`:l[0];
-const wk=n=>n<=DET?W[n-1]:O[n-DET-1];
+
+const MOD=[
+["Terminal và Git",[1,2],12,16],
+["Python cơ bản và Project 1",[3,4],40,50],
+["NumPy, pandas và Project 2",[5,6],35,45],
+["SQL và Project 3",[7,8],35,45],
+["Dữ liệu thị trường, Polars, DuckDB",[9,10],30,40],
+["Backtest đầu tay (cố tình sai)",[11],10,15],
+["Xác suất",[13,14,15,16,17,18],100,130],
+["Thống kê",[19,20,21,22],70,90],
+["Đại số tuyến tính",[24,25,26],50,65],
+["Giải tích và tối ưu",[27,28],30,40],
+["Machine learning cho dữ liệu tài chính",[30,31,32,33,34,35],90,120],
+["Chuỗi thời gian",[36,37,38,39],60,80],
+["Credit scoring và Project 5",[40,41,42],45,60],
+["Danh mục và quản trị rủi ro",[44,45,46],45,60],
+["Tài chính nền, mô hình nhân tố, kinh tế lượng",[47,48,49],45,60],
+["Stochastic calculus và quyền chọn",[50,51,52],50,65],
+["Backtest nâng cao và chiến lược",[53,54,55,56,57],80,100],
+["Project 4: chiến lược quan trọng nhất",[58,59,60],50,80],
+["Giải thuật",[62,63],30,45],
+["Brain teasers xác suất",[64,65],30,40],
+["Tiếng Anh, project tổng hợp, CV, nộp đơn",[66,67,68,69],70,100]];
+const SLACK=1.15;
+const KEY="lt69m_done",TK="lt69m_track",HK="lt69m_hide",PK="lt69m_park",HP="lt69m_hpw";
+let D={},TRACK="q",HIDE=false,HPW=24;
+const $=id=>document.getElementById(id);
+const rd=k=>{try{return localStorage.getItem(k)}catch(e){return null}},wr=(k,v)=>{try{localStorage.setItem(k,v)}catch(e){}};
+const wk=n=>W[n-1];
 const tag=w=>{const q=w[0][0],d=w[0][1];return TRACK=="q"?q:TRACK=="d"?d:(RK[q]>=RK[d]?q:d)};
-const ids=n=>n<=DET?K.map(k=>"w"+n+"_"+k[0]):["w"+n+"_s"];
-const full=n=>ids(n).every(i=>D[i]);
+const sid=n=>["s"+n+"_l","s"+n+"_p","s"+n+"_g"];
+const mtag=m=>m[1].map(n=>tag(wk(n))).reduce((a,b)=>RK[a]>=RK[b]?a:b);
+const vis=m=>!(HIDE&&mtag(m)=="l");
+const steps=m=>m[1].filter(n=>!(HIDE&&tag(wk(n))=="l"));
+const mids=m=>steps(m).flatMap(sid);
+const mfull=m=>mids(m).every(i=>D[i]);
+const hrs=m=>(m[2]+m[3])/2*SLACK;
 const row=(id,t,b)=>`<label class="row${D[id]?" d":""}"><input type="checkbox" data-i="${id}"${D[id]?" checked":""}><span><b>${b}</b>${t}</span></label>`;
+function curMod(){for(let i=0;i<MOD.length;i++)if(vis(MOD[i])&&!mfull(MOD[i]))return i;return MOD.length-1}
 function render(){
- let h="",cur=curWeek();
- PH.forEach((p,pi)=>{
+ let h="",cur=curMod(),acc=0;
+ MOD.forEach((m,i)=>{if(!vis(m))return;
+  const t=mtag(m),c=mids(m),dn=c.filter(x=>D[x]).length,w0=acc/HPW;acc+=hrs(m);const w1=acc/HPW;
   let inner="";
-  for(let n=1;n<=N;n++){if(ph(n)!=pi)continue;
-   const w=wk(n),t=tag(w);
-   if(HIDE&&t=="l")continue;
-   const c=ids(n),dn=c.filter(i=>D[i]).length;
-   inner+=`<details class="wk${n==cur?" cur":""}${full(n)?" full":""}"${n==cur?" open":""} id="wk${n}"><summary><span class="n">Tuần ${n}</span><span>${w[1]}</span><span class="tg ${t}">${TG[t]}</span><span class="c">${dn}/${c.length}</span></summary><div class="bd">`;
-   if(n<=DET){
-    inner+=`<p class="g">Mục tiêu: ${w[2]}</p>`+row(`w${n}_l`,w[3],K[0][1])+row(`w${n}_d`,w[4],K[1][1])+row(`w${n}_c`,w[5],K[2][1])+row(`w${n}_x`,w[6],K[3][1])+`<div class="gate">${row(`w${n}_g`,w[7],K[4][1])}</div><p class="sk">Không cần học tuần này: ${w[8]}</p>`;
-   }else inner+=row(`w${n}_s`,`${w[1]}. Nguồn chính: ${w[2]}. Chi tiết từng buổi sẽ được bổ sung.`,"Đề cương");
-   const sr=SRC.filter(s=>n>=s[0]&&n<=s[1]);if(sr.length)inner+=`<p class="sk"><b>Nguồn học:</b> ${sr.map(s=>s[3].map(lk).join(" · ")).join(" · ")}</p>`;
-   inner+=`</div></details>`;}
-  h+=`<details class="ph" open><summary>${p}</summary>${inner}</details>`;});
+  steps(m).forEach(n=>{const w=wk(n),tg=tag(w);
+   inner+=`<p class="g">${w[1]} <span class="tg ${tg}">${TG[tg]}</span><br><span class="st">Mục tiêu: ${w[2]}</span></p>`
+    +row(`s${n}_l`,w[3],"Học")+row(`s${n}_p`,`Bài tập: ${w[4]}<br>Code: ${w[5]}<br>Lab: ${w[6]}`,"Thực hành")
+    +`<div class="gate">${row(`s${n}_g`,w[7],"Cổng kiểm tra")}</div><p class="sk">Không cần học: ${w[8]}</p>`;});
+  const sr=SRC.filter(s=>m[1].some(n=>n>=s[0]&&n<=s[1]));
+  if(sr.length)inner+=`<p class="sk"><b>Nguồn học:</b> ${[...new Set(sr.flatMap(s=>s[3].map(lk)))].join(" · ")}</p>`;
+  h+=`<details class="wk${i==cur?" cur":""}${mfull(m)?" full":""}"${i==cur?" open":""} id="m${i}"><summary><span class="n">Module ${i+1}</span><span>${m[0]}</span><span class="tg ${t}">${TG[t]}</span><span class="st">~${m[2]}–${m[3]} giờ · khoảng tuần ${Math.floor(w0)+1}–${Math.ceil(w1)}</span><span class="c">${dn}/${c.length}</span></summary><div class="bd">${inner}</div></details>`;});
  $("root").innerHTML=h;
  document.querySelectorAll("input[data-i]").forEach(cb=>cb.onchange=()=>{D[cb.dataset.i]=cb.checked;wr(KEY,JSON.stringify(D));render();});
  stat();
 }
-function curWeek(){
- if(START){const d=Math.floor((Date.now()-new Date(START))/6048e5)+1;return Math.min(N,Math.max(1,d))}
- for(let n=1;n<=N;n++)if(!full(n))return n;return N;
-}
 function stat(){
- let a=0,b=0;for(let n=1;n<=N;n++){const c=ids(n);a+=c.length;b+=c.filter(i=>D[i]).length}
- const p=Math.round(b/a*100);
+ let a=0,b=0,mm=0,md=0,tot=0,rem=0;
+ MOD.forEach(m=>{if(!vis(m))return;const c=mids(m),dn=c.filter(i=>D[i]).length;a+=c.length;b+=dn;tot+=hrs(m);rem+=hrs(m)*(1-(c.length?dn/c.length:1));if(mtag(m)=="m"){mm++;if(mfull(m))md++}});
+ const p=a?Math.round(b/a*100):0;
  $("cnt").innerText=`Tiến độ: ${b}/${a} ô`;$("pct").innerText=p+"%";$("fill").style.width=p+"%";
- let m=0,md=0;for(let n=1;n<=N;n++){if(tag(wk(n))=="m"){m++;if(full(n))md++}}
- $("tn").innerText=TN[TRACK];$("mu").innerText=`${md}/${m} tuần xong`;
- document.querySelectorAll(".tr button[data-t]").forEach(x=>x.classList.toggle("on",x.dataset.t==TRACK));
- $("hide").classList.toggle("on",HIDE);
- const c=curWeek();
- $("now").innerHTML=`<span><b>Tuần hiện tại: ${c}</b> (${wk(c)[1]})</span><button onclick="var e=document.getElementById('wk${c}');if(e){e.open=true;e.scrollIntoView({behavior:'smooth'})}">Đi tới tuần này</button><label class="st">Ngày bắt đầu: <input type="date" id="sd" value="${START}"></label>`;
- $("sd").onchange=e=>{START=e.target.value;wr(SK,START);render()};
+ $("tn").innerText=TN[TRACK];$("mu").innerText=`${md}/${mm} module xong`;
+ document.querySelectorAll(".tr button[data-t]").forEach(x=>x.classList.toggle("on",x.dataset.t==TRACK));$("hide").classList.toggle("on",HIDE);
+ const c=curMod(),wl=Math.ceil(rem/HPW),fin=new Date(Date.now()+wl*6048e5).toLocaleDateString("vi-VN");
+ $("now").innerHTML=`<span><b>Đang ở module ${c+1}:</b> ${MOD[c][0]}</span><button onclick="var e=document.getElementById('m${c}');if(e){e.open=true;e.scrollIntoView({behavior:'smooth'})}">Đi tới module này</button><label class="st">Giờ học mỗi tuần: <input type="number" id="hp" min="3" max="60" value="${HPW}" style="width:58px"></label><span class="st">Tổng ~${Math.round(tot)} giờ (đã gồm 15% dự phòng), còn ~${Math.round(rem)} giờ ≈ ${wl} tuần, dự kiến xong ${fin}</span>`;
+ $("hp").onchange=e=>{HPW=Math.max(3,Math.min(60,+e.target.value||24));wr(HP,HPW);render()};
 }
 function trk(t){TRACK=t;wr(TK,t);render()}
 function hid(){HIDE=!HIDE;wr(HK,HIDE?"1":"");render()}
 function thm(){const r=document.documentElement,a=r.getAttribute("data-theme"),dk=a?a=="dark":matchMedia("(prefers-color-scheme:dark)").matches,n=dk?"light":"dark";r.setAttribute("data-theme",n);wr("lt65_theme",n)}
 function rst(){if(confirm("Xóa toàn bộ dấu tick để làm lại từ đầu?")){D={};wr(KEY,"{}");render()}}
-function exp(){const b=new Blob([JSON.stringify({v:5,done:D,start:START,track:TRACK,park:$("park").value},null,2)],{type:"application/json"});const u=URL.createObjectURL(b),a=document.createElement("a");a.href=u;a.download="lotrinh65_backup_"+new Date().toISOString().slice(0,10)+".json";a.click();URL.revokeObjectURL(u)}
+function exp(){const b=new Blob([JSON.stringify({v:6,done:D,hpw:HPW,track:TRACK,park:$("park").value},null,2)],{type:"application/json"});const u=URL.createObjectURL(b),a=document.createElement("a");a.href=u;a.download="lotrinh_module_backup_"+new Date().toISOString().slice(0,10)+".json";a.click();URL.revokeObjectURL(u)}
 function load(ev){
  const f=ev.target.files[0];ev.target.value="";if(!f)return;
  const r=new FileReader();r.onload=e=>{try{
-  const d=JSON.parse(e.target.result);if(!d||d.v!==5||typeof d.done!=="object"||Array.isArray(d.done))throw 0;
-  const all=new Set();for(let n=1;n<=N;n++)ids(n).forEach(i=>all.add(i));
+  const d=JSON.parse(e.target.result);if(!d||d.v!==6||typeof d.done!=="object"||Array.isArray(d.done))throw 0;
+  const all=new Set();for(let n=1;n<=N;n++)sid(n).forEach(i=>all.add(i));
   const k=Object.keys(d.done);if(!k.length||!k.every(x=>typeof d.done[x]==="boolean"&&all.has(x)))throw 0;
   if(!confirm(`File có ${k.length} mục hợp lệ. Ghi đè tiến độ hiện tại?`))return;
-  D=d.done;wr(KEY,JSON.stringify(D));if(typeof d.park==="string"){$("park").value=d.park;wr(PK,d.park)}if(typeof d.start==="string"){START=d.start;wr(SK,START)}if(TN[d.track]){TRACK=d.track;wr(TK,TRACK)}render();
+  D=d.done;wr(KEY,JSON.stringify(D));if(typeof d.park==="string"){$("park").value=d.park;wr(PK,d.park)}if(TN[d.track]){TRACK=d.track;wr(TK,TRACK)}if(d.hpw>=3&&d.hpw<=60){HPW=d.hpw;wr(HP,HPW)}render();
  }catch(x){alert("File không đúng định dạng sao lưu của lộ trình này, tiến độ hiện tại chưa bị thay đổi.")}};
  r.readAsText(f);
 }
 (function(){
  try{D=JSON.parse(rd(KEY)||"{}")}catch(e){D={}}
- START=rd(SK)||"";const t=rd(TK);if(TN[t])TRACK=t;HIDE=!!rd(HK);$("libb").innerHTML=CRIT+SRC.map(s=>`<p style="margin:12px 0 2px;font-weight:700">${s[2]} <span class="st">(tuần ${s[0]}${s[1]>s[0]?"–"+s[1]:""})</span></p><p class="sk" style="margin:0">${s[3].map(lk).join(" · ")}</p>`).join("");$("park").value=rd(PK)||"";$("park").oninput=e=>wr(PK,e.target.value);
+ const t=rd(TK);if(TN[t])TRACK=t;HIDE=!!rd(HK);const hp=+rd(HP);if(hp>=3&&hp<=60)HPW=hp;
+ $("libb").innerHTML=CRIT+SRC.map(s=>`<p style="margin:12px 0 2px;font-weight:700">${s[2]}</p><p class="sk" style="margin:0">${s[3].map(lk).join(" · ")}</p>`).join("");
+ $("park").value=rd(PK)||"";$("park").oninput=e=>wr(PK,e.target.value);
  const th=rd("lt65_theme");if(th)document.documentElement.setAttribute("data-theme",th);
  render();
 })();
